@@ -7,6 +7,7 @@ from lunar_python import Lunar, Solar
 import sxtwl  # 用于四柱八字转日期的库
 from sxtwl import GZ
 from prettytable import PrettyTable
+import itertools
 
 # 定义 namedtuple，用于存储四柱八字的天干和地支
 Gans = namedtuple("Gans", "year month day time")
@@ -1087,7 +1088,7 @@ def 命局所有信息展示(本命盘四个天干名字列表, 本命盘四个�
 
 
 
-import itertools
+
 
 # 定义作用的分数变化
 作用分数 = {
@@ -1438,6 +1439,7 @@ def 主程序():
             # 这里我们假设已有函数根据生日计算出“定局字”和“最终位置”
             # 你需要根据实际情况替换下面的示例代码
             # 示例：用户输入生日后自动计算“定局字”
+            options = 解析输入命令()
             print("你选择了普通模式，开始根据生日计算定局字。")
             # 这里放置你已有的计算“定局字”的代码
             # 假设有函数叫做 "计算定局字" 返回定局字集合和最终位置
@@ -1492,7 +1494,7 @@ def 主程序():
 
     except Exception as e:
         print("脚本运行过程中出现错误：", e)
-    
+
 
 # 假设的计算定局字函数，根据实际情况实现
 def 计算定局字():
